@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Destination Details</title>
+  </head>
+  <body>
+    <h1>Destination Details</h1>
+    <p>
+      <strong>
+        <!-- Get the value of the "name" query parameter -->
+        <!-- using JavaScript and display it here -->
+        <script>
+          const urlParams = new URLSearchParams(window.location.search);
+          const name = urlParams.get('name');
+          document.write(name.charAt(0).toUpperCase() + name.slice(1));
+        </script>
+      </strong>
+    </p>
+    <p>
+      <!-- Display details about the destination based on the user's choice -->
+      <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        switch(name) {
+          case 'agra':
+            document.write('Agra is famous for the Taj Mahal, one of the Seven Wonders of the World.');
+            break;
+          case 'goa':
+            document.write('Goa is a coastal state known for its beaches and nightlife.');
+            break;
+          case 'rajasthan':
+            document.write('Gujarat is a state known for its rich history and vibrant culture.');
+            break;
+          default:
+            document.write('Invalid destination.');
+        }
+      </script>
+    </p>
+    <a href="BOOKING.html">Back to Home</a>
+  </body>
+</html>
